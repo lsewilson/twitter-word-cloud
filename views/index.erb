@@ -1,20 +1,23 @@
 <html>
   <head>
     <title>Twitter Word Cloud</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/jqcloud.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/jqcloud.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/jqcloud-1.0.4.min.js"></script>
     <script type="text/javascript" src="scripts/interface.js"></script>
-
   </head>
 
   <body>
-    <label for="username">
-      Enter Twitter handle here, e.g. POTUS
-      <input id="username" type="text" name="username">
-    </label>
-    <button id="submit">Submit</button>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          Enter Twitter handle here, e.g. POTUS
+          <input id="username" type="text" name="username">
+          <button class="button-primary" id="submit">Submit</button>
+        </div>
+      </div>
 
-    <div id="cloud" style="width: 550px; height: 350px;"></div>
-
+      <div id="cloud" style="width: 550px; height: 350px;"></div>
+    </div>
   </body>
