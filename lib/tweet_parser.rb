@@ -3,7 +3,7 @@ require 'CSV'
 class TweetParser
 
   def initialize(tweets)
-    @tweets = tweets
+    @tweets = tweets.join(' ')
   end
 
   def get_cloud_array
@@ -13,16 +13,16 @@ class TweetParser
   private
 
   def remove_non_cloud_words
-    @tweets.join(' ').gsub!(/((?:f|ht)tps?:\/[^\s]+|@(\w+))/, '')
+    @tweets.gsub!(/((?:f|ht)tps?:\/[^\s]+|@(\w+))/, '')
+  end
+
+  def split_tweets
+    remove_non_cloud_words.split(/\W+/)
   end
 
   def remove_stop_words
     stop_words = CSV.read("./lib/assets/stop-word-list.csv").flatten
     split_tweets.reject{|w| stop_words.include? w}
-  end
-
-  def split_tweets
-    remove_non_cloud_words.split(/\W+/)
   end
 
   def word_count_hash
