@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   function getCloud() {
     $.ajax({
-      url: "https://twittercloud.herokuapp.com/cloud",
+      url: $(location).attr('href') + "cloud",
       type: "get",
       data:{username: $('#username').val()},
       success: function(response) {
