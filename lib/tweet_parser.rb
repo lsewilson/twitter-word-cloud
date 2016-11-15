@@ -13,7 +13,7 @@ class TweetParser
   private
 
   def remove_non_cloud_words
-    @tweets.gsub!(/((?:f|ht)tps?:\/[^\s]+|@(\w+))/, '')
+    @tweets.gsub!(/((?:f|ht)tps?:\/[^\s]+|@(\w+))|[0-9]/, '')
   end
 
   def split_tweets
@@ -22,7 +22,7 @@ class TweetParser
 
   def remove_stop_words
     stop_words = CSV.read("./lib/assets/stop-word-list.csv").flatten
-    split_tweets.reject{|w| stop_words.include? w}
+    split_tweets.reject{|w| stop_words.include? w.downcase }
   end
 
   def word_count_hash
