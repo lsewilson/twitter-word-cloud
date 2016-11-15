@@ -40,6 +40,7 @@ GEM
     naught (1.1.0)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
+    power_assert (0.2.6)
     public_suffix (2.0.4)
     rack (1.6.5)
     rack-protection (1.5.3)
@@ -72,6 +73,8 @@ GEM
       diff-lcs (>= 1.1.2)
       extlib (>= 0.9.5)
       highline (>= 1.4.0)
+    test-unit (3.2.2)
+      power_assert
     thread_safe (0.3.5)
     tilt (2.0.5)
     twitter (5.16.0)
@@ -101,6 +104,7 @@ DEPENDENCIES
   rspec-sinatra
   shotgun
   sinatra
+  test-unit
   twitter
 
 RUBY VERSION

@@ -8,6 +8,7 @@ gem 'dotenv'
 gem 'twitter'
 
 group :test do
+  gem 'test-unit'
   gem 'rspec'
   gem 'rspec-sinatra'
   gem 'capybara'

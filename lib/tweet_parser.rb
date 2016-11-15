@@ -10,12 +10,12 @@ class TweetParser
 
   private
 
-  def remove_hyperlinks
-    @tweets.join(" ").gsub!(/(?:f|ht)tps?:\/[^\s]+/, '')
+  def remove_non_cloud_words
+    @tweets.join(' ').gsub!(/((?:f|ht)tps?:\/[^\s]+|@(\w+))/, '')
   end
 
   def split_tweets
-    remove_hyperlinks.split(/\W+/)
+    remove_non_cloud_words.split(/\W+/)
   end
 
   def word_count_hash
