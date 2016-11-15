@@ -12,6 +12,7 @@ $(document).ready(function(){
   }
 
   $("#submit").click(function() {
+    $("#cloud").empty();
     getCloud();
   });
 

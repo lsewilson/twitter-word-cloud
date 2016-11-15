@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require 'twitter'
 require 'dotenv'
-require 'JSON'
+require 'json'
 require_relative 'lib/tweet_parser'
 
 Dotenv.load
