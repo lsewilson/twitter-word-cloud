@@ -10,12 +10,16 @@ class TweetParser
 
   private
 
+  def remove_hyperlinks
+    @tweets.join(" ").gsub!(/(?:f|ht)tps?:\/[^\s]+/, '')
+  end
+
   def split_tweets
-    @tweets.join(" ").split(/\W+/)
+    remove_hyperlinks.split(/\W+/)
   end
 
   def word_count_hash
-    split_tweets.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+    split_tweets.inject(Hash.new(0)) { |h,v| h[v] += 1 ; h}
   end
 
   def map_to_cloud_array(hash)
@@ -23,7 +27,7 @@ class TweetParser
     hash.each do |k,v|
       array << { text: k , weight: v}
     end
-    return array
+    array
   end
 
 end
