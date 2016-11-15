@@ -57,12 +57,14 @@ $ rspec
 Using Rack:
 
 ```
+$ cd app
 $ rackup
 Go to localhost:9292 in your browser.
 ```
 
 Using Shotgun:
 ```
+$ cd app
 $ shotgun
 Go to localhost:9393 in your browser.
 ```

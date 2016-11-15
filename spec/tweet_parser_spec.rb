@@ -1,4 +1,4 @@
-require 'tweet_parser'
+require_relative '../app/lib/tweet_parser'
 
 describe TweetParser do
 

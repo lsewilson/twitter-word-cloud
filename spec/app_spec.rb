@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require_relative '../app'
+require_relative '../app/app'
 require 'rack/test'
 require 'test/unit'
 
@@ -16,7 +16,7 @@ class AppTest < Test::Unit::TestCase
   end
 
   def test_it_gets_a_text_response_from_cloud_path
-    get '/cloud?username=twitter'
+    get '/cloud?username=wilslau'
     assert last_response.body.include? 'text'
   end
 
@@ -24,5 +24,5 @@ class AppTest < Test::Unit::TestCase
     get '/cloud?username=twitter'
     assert last_response.body.include? 'weight'
   end
-  
+
 end

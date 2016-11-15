@@ -21,7 +21,7 @@ class TweetParser
   end
 
   def remove_stop_words
-    stop_words = CSV.read("./lib/assets/stop-word-list.csv").flatten
+    stop_words = CSV.read(File.join(File.dirname(__FILE__), "./assets/stop-word-list.csv")).flatten
     split_tweets.reject{|w| stop_words.include? w.downcase }
   end
 
