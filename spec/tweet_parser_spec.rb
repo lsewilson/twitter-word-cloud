@@ -7,7 +7,7 @@ describe TweetParser do
 
   describe '#get_cloud_array' do
     it 'returns only the count of different words in a list of tweets' do
-      array = [{text: "Lorem", weight: 2}, {text: "ipsum", weight: 2}]
+      array = [{text: "Lorem", weight: 2}, {text: "ipsum", weight: 1}]
       expect(parser.get_cloud_array).to eq array
     end
   end
