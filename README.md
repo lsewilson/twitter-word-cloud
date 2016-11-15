@@ -4,14 +4,29 @@ This is a a simple Sinatra app which generates a word cloud from a twitter usern
 
 ### Dependencies
 
-Twitter Cloud uses the [jQCloud](https://github.com/lucaong/jQCloud) library to generate a word cloud.
+ * Ruby 2.3.1
+ * Git
+ * Bundler gem
+ * [Twitter gem](https://github.com/sferik/twitter)
+ * Sinatra framework
+ * [jQCloud](https://github.com/lucaong/jQCloud) to generate the word cloud
+ * [Skeleton](http://getskeleton.com/) CSS framework
+
+### Features
+ * Asks user for twitter handle
+ * Makes request to Twitter API for 200 tweets
+ * Calculates frequency of each word
+ * Displays a word cloud generated from tweets by the given Twitter user
+ * Stop words removed from word cloud
+ * Mobile-responsive site
+ * Accessible on the open internet
 
 ### Installation instructions
 
 #### Prerequisites:
 - Ruby
 - Git
-- Bundler
+- Bundler gem
 
 #### Set Up
 
@@ -37,7 +52,7 @@ This app has been tested using RSpec and Capybara.
 $ rspec
 ```
 
-### Run the app
+### Running the app
 
 Using Rack:
 
