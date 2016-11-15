@@ -1,6 +1,9 @@
 require 'sinatra/base'
 require 'twitter'
 require 'dotenv'
+require 'JSON'
+require_relative 'lib/tweet_parser'
+
 Dotenv.load
 
 ENV["RACK_ENV"] ||= "development"
@@ -21,6 +24,9 @@ class App < Sinatra::Base
   get '/cloud' do
     options = {count: 200, include_rts: false}
     tweets = @@twitter.user_timeline(params[:username],options).map(&:text)
+    parser = TweetParser.new(tweets)
+    content_type :json
+    parser.get_cloud_array.to_json
   end
 
   # start the server if ruby file executed directly
