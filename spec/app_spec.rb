@@ -16,7 +16,7 @@ class AppTest < Test::Unit::TestCase
   end
 
   def test_it_gets_a_text_response_from_cloud_path
-    get '/cloud?username=wilslau'
+    get '/cloud?username=twitter'
     assert last_response.body.include? 'text'
   end
 
