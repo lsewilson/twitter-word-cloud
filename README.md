@@ -18,7 +18,7 @@ This is a simple Sinatra app which generates a word cloud from a twitter usernam
  * Calculates frequency of each word
  * Displays a word cloud generated from tweets by the given Twitter user
  * Stop words removed from word cloud
- * Mobile-responsive site
+ * Works in a mobile browser 
  * Accessible on the open internet
 
 ### Installation instructions
