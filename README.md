@@ -1,6 +1,6 @@
 # Twitter Cloud
 
-This is a simple Sinatra app which generates a word cloud from a twitter username. The app can be viewed online [here](https://twittercloud.herokuapp.com).
+This is a simple Sinatra app which generates a **word cloud** from a **Twitter** username. The app can be viewed online [here](https://twittercloud.herokuapp.com).
 
 ### Dependencies
 
@@ -18,7 +18,7 @@ This is a simple Sinatra app which generates a word cloud from a twitter usernam
  * Calculates frequency of each word
  * Displays a word cloud generated from tweets by the given Twitter user
  * Stop words removed from word cloud
- * Works in a mobile browser 
+ * Works in a mobile browser
  * Accessible on the open internet
 
 ### Installation instructions
@@ -39,14 +39,16 @@ Install gem dependencies:
 $ cd twitter-word-cloud
 $ bundle
 ```
-Copy example environment variables file to a new .env file and replace Twitter API keys with your own:
+Copy example environment variables file to a new .env file:
 ```
+$ cd app
 $ cp .env.example .env
 ```
+Open your new .env file and replace all the \*** placeholders with your own Twitter API keys.
 
 ### Running tests
 
-This app has been tested using RSpec and Capybara.
+This app has been tested using RSpec, Capybara.
 
 ```
 $ rspec
@@ -57,14 +59,16 @@ $ rspec
 Using Rack:
 
 ```
-$ cd app
 $ rackup
 Go to localhost:9292 in your browser.
 ```
 
 Using Shotgun:
 ```
-$ cd app
 $ shotgun
 Go to localhost:9393 in your browser.
 ```
+
+Fill in the form with a public Twitter handle and click submit to generate a word cloud.
+
+![Screenshot](http://i.imgur.com/PtAvUUll.png)
