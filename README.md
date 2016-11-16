@@ -1,6 +1,6 @@
 # Twitter Cloud
 
-This is a a simple Sinatra app which generates a word cloud from a twitter username. The app can be viewed online [here](https://twittercloud.herokuapp.com).
+This is a simple Sinatra app which generates a word cloud from a twitter username. The app can be viewed online [here](https://twittercloud.herokuapp.com).
 
 ### Dependencies
 
