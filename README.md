@@ -48,7 +48,7 @@ Open your new .env file and replace all the \*** placeholders with your own Twit
 
 ### Running tests
 
-This app has been tested using RSpec, Capybara.
+This app has been tested using Rack-Test, RSpec, Capybara.
 
 ```
 $ rspec
@@ -72,3 +72,27 @@ Go to localhost:9393 in your browser.
 Fill in the form with a public Twitter handle and click submit to generate a word cloud.
 
 ![Screenshot](http://i.imgur.com/PtAvUUll.png)
+
+### My Approach
+
+#### Initial planning:
+
+After researching various word cloud libraries and gems, I decided to use jQCloud. As a result, this meant that I would need an API which returned a JSON object that jQCloud could interpret and use to render a word cloud.
+
+For the back-end I chose to use Sinatra because of its lightweightness compared with Rails.
+
+#### Building the app:
+
+Once I had a basic index page with a form for a Twitter handle set up, I started working on building in the Twitter API. My first goal was to make sure I could render the tweets of an inputted user on the page. When I was certain the API was working correctly, I started building a TweetParser class which would read the collection of tweets it was passed and return my word cloud JSON object. 
+
+With the basic app working, I deployed it to Heroku so that it was accessible on the open internet. This helped me notice bugs in the app, such as in the AJAX requests which were originally directed at the localhost.
+
+My next task was removing stop words and ensuring that any hyperlinks or Twitter user tags were not included in the word cloud so I adapted my TweetParser class.
+
+This was all I managed to do in a day, and there are still features I would like to have added.
+
+#### To do:
+
+* Replace jQCloud with custom built word cloud library.
+* Make the site more mobile-responsive.
+* Jazz up the styling.
