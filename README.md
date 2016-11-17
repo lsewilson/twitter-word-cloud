@@ -1,6 +1,6 @@
 # Twitter Cloud
 
-This is a simple Sinatra app which generates a **word cloud** from a **Twitter** username. The app can be viewed online [here](https://twittercloud.herokuapp.com).
+This is a Sinatra web app which generates a **word cloud** from a **Twitter** username. The app can be viewed online [here](https://twittercloud.herokuapp.com).
 
 ### Dependencies
 
@@ -83,7 +83,7 @@ For the back-end I chose to use Sinatra because of its lightweightness compared 
 
 #### Building the app:
 
-Once I had a basic index page with a form for a Twitter handle set up, I started working on building in the Twitter API. My first goal was to make sure I could render the tweets of an inputted user on the page. When I was certain the API was working correctly, I started building a TweetParser class which would read the collection of tweets it was passed and return my word cloud JSON object. 
+Once I had a basic index page with a form for a Twitter handle set up, I started working on building in the Twitter API. My first goal was to make sure I could render the tweets of an inputted user on the page. When I was certain the API was working correctly, I started building a TweetParser class which would read the collection of tweets it was passed and return my word cloud JSON object.
 
 With the basic app working, I deployed it to Heroku so that it was accessible on the open internet. This helped me notice bugs in the app, such as in the AJAX requests which were originally directed at the localhost.
 
